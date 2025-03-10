@@ -23,6 +23,12 @@ class User extends Authenticatable
         'email',
         'phone_number',
         'password',
+        'role',
+    ];
+
+    // Valor por defecto a nuevos usuarios
+    protected $attributes = [
+        'role' => 'guest',
     ];
 
     /**
@@ -46,5 +52,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
     }
 }
