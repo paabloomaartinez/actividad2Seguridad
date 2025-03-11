@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div class="overflow-x-auto">
-                        <table class="min-w-full bg-white border border-gray-200">
+                        <table class="w-full bg-white border border-gray-200">
                             <thead class="text-white" style="background-color: coral;">
                                 <tr>
                                     <th class="py-3 px-6 text-left">{{ __('Nombre') }}</th>
@@ -28,8 +28,7 @@
                                     <td class="py-3 px-6">{{ $user->email }}</td>
                                     <td class="py-3 px-6">{{ $user->phone_number ?? 'No disponible' }}</td>
                                     <td class="py-3 px-6">
-                                        <span class="px-3 py-1 rounded-full text-sm font-semibold 
-                                                {{ $user->role === 'admin' ? 'bg-red-500' : 'bg-blue-500' }}">
+                                        <span class=" py-1 rounded-full text-sm font-semibold">
                                             {{ ucfirst($user->role) }}
                                         </span>
                                     </td>
