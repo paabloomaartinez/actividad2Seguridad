@@ -28,8 +28,7 @@
                                     <td class="py-3 px-6">{{ $user->email }}</td>
                                     <td class="py-3 px-6">{{ $user->phone_number ?? 'No disponible' }}</td>
                                     <td class="py-3 px-6">
-                                        <span class="px-3 py-1 rounded-full text-sm font-semibold 
-                                                {{ $user->role === 'admin' ? 'bg-red-500' : 'bg-blue-500' }}">
+                                        <span class=" py-1 rounded-full text-sm font-semibold">
                                             {{ ucfirst($user->role) }}
                                         </span>
                                     </td>
