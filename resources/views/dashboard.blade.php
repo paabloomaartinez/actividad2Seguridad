@@ -14,4 +14,12 @@
             </div>
         </div>
     </div>
+
+    @if(Auth::user() && Auth::user()->role === 'admin')
+    <div class="mt-4 flex justify-center">
+        <a href="{{ route('users.list') }}" class="px-4 py-2 bg-blue-500 rounded hover:bg-blue-600 transition">
+            Ver Usuarios
+        </a>
+    </div>
+    @endif
 </x-app-layout>
