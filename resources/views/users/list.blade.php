@@ -22,7 +22,7 @@
                             </thead>
                             <tbody class="text-gray-700">
                                 @forelse ($users as $user)
-                                <tr class="border-b hover:bg-gray-100">
+                                <tr class="border-b hover:bg-gray-100" style="text-align: center;">
                                     <td class="py-3 px-6">{{ $user->name }}</td>
                                     <td class="py-3 px-6">{{ $user->surname }}</td>
                                     <td class="py-3 px-6">{{ $user->email }}</td>

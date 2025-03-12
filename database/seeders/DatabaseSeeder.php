@@ -3,10 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-
+use Database\Seeders\ProductSeeder; // Importar el seeder
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,16 +14,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
+        // Crear usuario admin
         User::factory()->create([
             'name' => 'Admin',
             'surname' => 'Admin',
-            'phone_number' => '612345678', 
-            'password' => Hash::make('admin123'), 
+            'phone_number' => '612345678',
+            'password' => Hash::make('admin123'),
             'role' => 'admin',
             'email' => 'admin@example.com',
         ]);
+
+        // Ejecutar el seeder de productos
+        $this->call(ProductSeeder::class);
     }
 }
- 
